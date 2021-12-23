@@ -29,6 +29,7 @@ function verifFunc(tabResultats){
     }
     console.log(verifTableau);
     afficherResultats(verifTableau);
+    couleurFonction(verifTableau);
     verifTableau = [];
 }
 
@@ -67,6 +68,27 @@ function afficherResultats(tabCheck){
         break;
     
         default:
-            break;
+            'Wops, cas innatendu.';
+        break;
     }
 }
+
+function couleurFonction(tabVals){
+    for(let j = 0; j < tabVals.length; j++){
+        if(tabVals[j] === true){
+            toutesLesQuestions[j].style.background = 'lightgreen';
+        } else {
+            toutesLesQuestions[j].style.background = '#ffb8b8';
+            toutesLesQuestions[j].classList.add('echec');
+
+            setTimeout(()=> {
+                toutesLesQuestions[j].classList.remove('echec');
+            },500)
+        }
+    }
+}
+toutesLesQuestions.forEach(item =>{
+    item.addEventListener('click',() => {
+        item.style.background = "white";
+    })
+})
