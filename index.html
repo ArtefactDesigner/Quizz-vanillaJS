@@ -11,12 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Quizz de culture général</h1>
+    <h1>Quizz de Culture Général</h1>
     <div class="container">
+        <!--Utilisation de form pour pouvoir utiliser les inputs et les labels-->
         <form class="form-quizz">
             <div class="question-block">
                 <h4>Qui est l'empereur de France le 2 décembre 1804 ? </h4>
+                <!--On donne le même "name" pour chaque input radio formant un groupe de réponse-->
                     <div>
+                        <!--Même identifiant pour lier le label avec l'input (id - for)-->
                         <input type="radio" id="Clovis" name="q1" value="a" checked>
                         <label for="Clovis">Clovis</label>
                     </div>

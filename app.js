@@ -9,6 +9,7 @@ const toutesLesQuestions = document.querySelectorAll('.question-block');
 let verifTableau =  [];
 
 form.addEventListener('submit',(e) => {
+    /*Prévient le comportement par défaut lors du submit - evite l'envoi du formulaire et donc la redirection de page lors du submit */
     e.preventDefault();
 
     for(i=1;i < 6; i++){

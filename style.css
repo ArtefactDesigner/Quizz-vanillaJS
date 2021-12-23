@@ -1,5 +1,6 @@
+/*on rajoute ::before et ::after qui ne sont pas sélectionner par le sélecteur universel '*' */
 *, ::before, ::after{
-    box-sizing: border-box;
+    box-sizing: border-box; /*on prend en compte le margin et le padding pour le calcul des largeurs et des hauteurs */
     margin:0;
     padding: 0;
 }
@@ -41,6 +42,7 @@ h1 {
 }
 
 .question-block input[type='radio']{
+    /*Aurgmente la taille des boutons radios*/
     transform: scale(1.8);
     margin:10px ;
 }
